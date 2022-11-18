@@ -29,10 +29,14 @@ for the book information, and call the customer service for customer information
 Implement the following events:
 
  When we change customer data, the corresponding borrowing(s) should also change
+
  When we change book data, the corresponding borrowing(s) should also change
+
  When we add, update or delete book data, the corresponding bookquery service should
 update its data
+
  When you add a review for a book, the bookquery service should update its data
+
 Make sure you implement the services using the best practices we learned in this course.
 
 Think about layers, adapters and DTO’s, domain classes, etc.

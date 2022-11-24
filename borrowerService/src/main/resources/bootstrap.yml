@@ -1,0 +1,8 @@
+spring:
+  application:
+    name: BorrowingService
+
+  cloud: 
+    config:
+      url: http://localhost:8888
+

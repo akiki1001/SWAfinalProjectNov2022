@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: ReviewService
+
+#    spring.config.import=optional:configserver: instead
+
+  cloud: 
+    config:
+      url: http://localhost:8888
+

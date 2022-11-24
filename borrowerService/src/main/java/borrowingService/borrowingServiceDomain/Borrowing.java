@@ -10,19 +10,31 @@ import java.math.BigInteger;
 import java.time.LocalDate;
 
 @Data
-@AllArgsConstructor
-@NoArgsConstructor
+//@AllArgsConstructor
+//@NoArgsConstructor
 @Document
 public class Borrowing {
     @Id
     private long borrowerNumber;
 
-    private LocalDate borrowingDate;
+   // private LocalDate borrowingDate;
 
     private Book book;
 
     private Customer customer;
 
+    public Borrowing(Book book, Customer customer) {
+        this.book = book;
+        this.customer = customer;
+    }
 
+    public Borrowing(long borrowerNumber, Book book, Customer customer) {
+        this.borrowerNumber = borrowerNumber;
+        this.book = book;
+        this.customer = customer;
+    }
 
+    public Borrowing() {
+
+    }
 }

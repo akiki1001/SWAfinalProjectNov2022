@@ -14,7 +14,7 @@ import java.math.BigInteger;
 @Document
 public class Customer {
     @Id
-    private BigInteger customerNumber;
+    private long customerNumber;
 
     private String name;
 

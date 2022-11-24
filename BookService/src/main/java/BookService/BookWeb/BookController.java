@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
+@RequestMapping("/books")
 public class BookController {
     @Autowired
     private BookService bookService;
@@ -23,6 +24,11 @@ public class BookController {
         bookService.addBook(bookDto);
         return ResponseEntity.ok().body(bookDto);
     }
+
+    @GetMapping("/{id}")
+    public BookDto getBook(@PathVariable("id") long isbn){
+        return bookService.getBook(isbn);
+}
 
     @PutMapping
     public ResponseEntity<?> updateBook(@RequestBody BookDto bookDto, @PathVariable Long bookNumber){

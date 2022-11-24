@@ -8,16 +8,23 @@ import java.math.BigInteger;
 import java.time.LocalDate;
 
 @Data
-@AllArgsConstructor
-@NoArgsConstructor
+//@AllArgsConstructor
+//@NoArgsConstructor
 public class BorrowingDto {
 
     private long borrowingNUmber;
 
-    private LocalDate borrowingDate;
+    //private LocalDate borrowingDate;
 
     private BookDto bookDto;
 
     private CustomerDto customerDto;
+    public BorrowingDto() {
+    }
 
+    public BorrowingDto(long borrowingNUmber, BookDto bookDto, CustomerDto customerDto) {
+        this.borrowingNUmber = borrowingNUmber;
+        this.bookDto = bookDto;
+        this.customerDto = customerDto;
+    }
 }

@@ -1,5 +1,39 @@
 server:
   port: 9090
 
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8763/eureka/,
+        http://localhost:8764/eureka/
 
+spring:
+  cloud:
+    gateway:
+      routes:
+        - id: customerService
+          uri: lb://CustomerService
+          predicates:
+            - Path=/customers/**
+        - id: bookCommandService
+          uri: lb://BookService
+          predicates:
+            - Path=/books/**
+        - id: bookQueriesService
+          uri: lb://BookQueryService
+          predicates:
+            - Path=/view/book/**
+        - id: borrowingService
+          uri: lb://BorrowingService
+          predicates:
+            - Path=/borrowings/**
+        - id: reviewService
+          uri: lb://ReviewService
+          predicates:
+            - Path=/reviews/**
 
+  zipkin:
+    base-url: http://localhost:9411/
+sleuth:
+  sampler:
+    probability: 1

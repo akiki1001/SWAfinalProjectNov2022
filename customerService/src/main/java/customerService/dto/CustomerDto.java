@@ -11,7 +11,7 @@ import java.math.BigInteger;
 @NoArgsConstructor
 public class CustomerDto {
 
-    private BigInteger customerNUmber;
+    private long customerNUmber;
 
     private String name;
 

@@ -1,6 +1,7 @@
 package borrowingService.borrowingServiceService.borrowingServiceImpl;
 
 import borrowingService.borrowingServiceDomain.Book;
+import borrowingService.borrowingServiceDomain.Borrowing;
 import borrowingService.borrowingServiceDomain.Customer;
 import borrowingService.borrowingServiceRepository.BorrowingRepository;
 import borrowingService.borrowingServiceService.BorrowingService;
@@ -86,7 +87,7 @@ public class BorrowingServiceImpl implements BorrowingService {
             throw new NullPointerException("Borrowing not found");
         }
         //here I will try to update DDD
-       borrowing.setBorrowingDate(borrowingDto.getBorrowingDate());
+       //borrowing.setBorrowingDate(borrowingDto.getBorrowingDate());
         borrowing.setBook(new Book().updateBook(borrowing.getBook(),borrowingDto.getBookDto()));
         borrowing.setCustomer(new Customer().updateCustomer(borrowing.getCustomer(),borrowingDto.getCustomerDto()));
 
@@ -120,8 +121,10 @@ public class BorrowingServiceImpl implements BorrowingService {
 //    }
 
     @Override
-    public BorrowingDto createBookQuery(long customerNumber, long isbn) {
-        return null;
+    public BorrowingDto createBookQuery(BookDto bookDto,CustomerDto customerDto) {
+        var borrowing = new Borrowing(BookAdapter.getBook(bookDto), CustomerAdapter.getCustomer(customerDto));
+        borrowingRepository.save(borrowing);
+        return BorrowingAdapter.getBorrowingDto(borrowing);
 
         //should work create
     }

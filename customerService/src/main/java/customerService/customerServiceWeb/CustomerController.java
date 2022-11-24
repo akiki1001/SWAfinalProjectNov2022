@@ -6,7 +6,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import java.math.BigInteger;
 import java.util.List;
 
 @RestController
@@ -17,23 +16,27 @@ public class CustomerController {
 
     @GetMapping
     public ResponseEntity<List<CustomerDto>> getAllCustomers(){
-        return ResponseEntity.ok().body(customerService.getAllBookQuery());
+        return ResponseEntity.ok().body(customerService.getAllCustomer());
+    }
+    @GetMapping("/{id}")
+    public CustomerDto getCustomers(@PathVariable("id") long customerNumber){
+        return customerService.getCustomer(customerNumber);
     }
 
     @PostMapping
     public ResponseEntity<?> addCustomer(@RequestBody CustomerDto customerDto){
-        customerService.addBookQuery(customerDto);
+        customerService.createCustomer(customerDto);
         return ResponseEntity.ok().body(customerDto);
     }
 
-    @PutMapping
-    public ResponseEntity<?> updateCustomer(@RequestBody CustomerDto customerDto, @PathVariable BigInteger customerNumber){
-        customerService.updateBookQuery(customerDto,customerNumber);
+    @PutMapping("/{id}")
+    public ResponseEntity<?> updateCustomer(@RequestBody CustomerDto customerDto, @PathVariable("id") long customerNumber){
+        customerService.updateCustomer(customerDto,customerNumber);
         return ResponseEntity.ok().body(customerDto);
     }
     @DeleteMapping
-    public ResponseEntity<?> deleteCustomer(@PathVariable BigInteger customerNumber){
-        var customerDto= customerService.deleteBookQuery(customerNumber);
+    public ResponseEntity<?> deleteCustomer(@PathVariable long customerNumber){
+        var customerDto= customerService.deleteCustomer(customerNumber);
         return ResponseEntity.ok().body(customerDto);
     }
 }

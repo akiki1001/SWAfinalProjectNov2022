@@ -8,7 +8,7 @@ public class BorrowingAdapter {
     public static Borrowing getBorrowing(BorrowingDto borrowingDto) {
         Borrowing borrowing = new Borrowing(
                 borrowingDto.getBorrowingNUmber(),
-                borrowingDto.getBorrowingDate(),
+                //borrowingDto.getBorrowingDate(),
                 new Book(borrowingDto.getBookDto().getIsbn(), borrowingDto.getBookDto().getTitle(), borrowingDto.getBookDto().getDescription()),
                 new Customer(borrowingDto.getCustomerDto().getCustomerNumber(), borrowingDto.getCustomerDto().getName())
         );
@@ -18,7 +18,7 @@ public class BorrowingAdapter {
     public static BorrowingDto getBorrowingDto(Borrowing borrowing) {
         BorrowingDto borrowingDto = new BorrowingDto(
                 borrowing.getBorrowerNumber(),
-                borrowing.getBorrowingDate(),
+                //borrowing.getBorrowingDate(),
                new BookDto(borrowing.getBook().getIsbn(), borrowing.getBook().getTitle(), borrowing.getBook().getDescription()),
                 new CustomerDto(borrowing.getCustomer().getCustomerNumber(), borrowing.getCustomer().getName())
 

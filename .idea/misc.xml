@@ -4,6 +4,16 @@
     <option name="originalFiles">
       <list>
         <option value="$PROJECT_DIR$/customersService/pom.xml" />
+        <option value="$PROJECT_DIR$/bookQueryService/pom.xml" />
+        <option value="$PROJECT_DIR$/bookQueryService-2/pom.xml" />
+        <option value="$PROJECT_DIR$/BookService/pom.xml" />
+        <option value="$PROJECT_DIR$/borrowerService/pom.xml" />
+        <option value="$PROJECT_DIR$/CloudGateway/pom.xml" />
+        <option value="$PROJECT_DIR$/configServer/pom.xml" />
+        <option value="$PROJECT_DIR$/customerService/pom.xml" />
+        <option value="$PROJECT_DIR$/EurekaServerReplica1/pom.xml" />
+        <option value="$PROJECT_DIR$/EurekaServerReplica2/pom.xml" />
+        <option value="$PROJECT_DIR$/ReviewService/pom.xml" />
       </list>
     </option>
   </component>

@@ -25,19 +25,26 @@ public class CustomerServiceImpl implements CustomerService {
     private Sender sender;
 
     @Override
-    public List<CustomerDto> getAllBookQuery() {
+    public List<CustomerDto> getAllCustomer() {
         return customerRepository.findAll().stream().map(n-> CustomerAdapter.getCustomerDto(n))
                 .collect(Collectors.toList());
     }
 
     @Override
-    public CustomerDto addBookQuery(CustomerDto customerDto) {
+    public CustomerDto getCustomer(long customerNumber) {
+
+
+        return CustomerAdapter.getCustomerDto(customerRepository.findById(customerNumber).get());
+    }
+
+    @Override
+    public CustomerDto createCustomer(CustomerDto customerDto) {
         customerRepository.save(CustomerAdapter.getCustomer(customerDto));
         return customerDto;
     }
 
     @Override
-    public CustomerDto updateBookQuery(CustomerDto customerDto, BigInteger customerNumber) {
+    public CustomerDto updateCustomer(CustomerDto customerDto, long customerNumber) {
         var customer= customerRepository.findById(customerNumber).get();
         if(customer==null){
             throw new NullPointerException("Customer not found");
@@ -58,7 +65,7 @@ public class CustomerServiceImpl implements CustomerService {
     }
 
     @Override
-    public CustomerDto deleteBookQuery(BigInteger customerNumber) {
+    public CustomerDto deleteCustomer(long customerNumber) {
         var customer= customerRepository.findById(customerNumber).get();
         if(customer==null){
             throw new NullPointerException("Customer not found ");

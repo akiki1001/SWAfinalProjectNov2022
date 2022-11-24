@@ -34,6 +34,11 @@ public class BookServiceImpl implements BookService {
     }
 
     @Override
+    public BookDto getBook(long isbn) {
+        return BookAdapter.getBookDto(bookRepository.findById(isbn).get());
+    }
+
+    @Override
     public BookDto addBook(BookDto bookDto) {
         var book=BookAdapter.getBook(bookDto);
         bookRepository.save(book);

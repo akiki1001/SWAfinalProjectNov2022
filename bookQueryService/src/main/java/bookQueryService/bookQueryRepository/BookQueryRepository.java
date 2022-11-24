@@ -10,6 +10,7 @@ import java.util.List;
 public interface BookQueryRepository extends MongoRepository<BookQuery,Long> {
 
     List<BookQuery> findAllByBook_Isbn(Long isbn);
+    BookQuery findBookQueriesByBook_Isbn(Long isbn);
 
 
 }

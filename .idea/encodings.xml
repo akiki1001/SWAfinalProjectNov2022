@@ -1,6 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/BookService/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/BookService/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/CloudGateway/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/CloudGateway/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/EurekaServerReplica1/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/EurekaServerReplica1/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/EurekaServerReplica2/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/EurekaServerReplica2/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ReviewService/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ReviewService/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/bookQueryService-2/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/bookQueryService-2/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/bookQueryService/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/bookQueryService/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/borrowerService/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/borrowerService/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/configServer/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/configServer/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/customerService/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/customerService/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/customersService/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/customersService/src/main/resources" charset="UTF-8" />
   </component>

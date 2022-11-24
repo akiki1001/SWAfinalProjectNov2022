@@ -2,14 +2,15 @@ package customerService.customerServiceService;
 
 import customerService.dto.CustomerDto;
 
-import java.math.BigInteger;
 import java.util.List;
 
 public interface CustomerService {
 
-    public List<CustomerDto> getAllBookQuery();
-    public CustomerDto addBookQuery(CustomerDto customerDto);
-    public CustomerDto updateBookQuery(CustomerDto customerDto, BigInteger customerNumber);
-    public CustomerDto deleteBookQuery(BigInteger customerNumber);
+    public List<CustomerDto> getAllCustomer();
+    public CustomerDto getCustomer(long customerNumber);
+
+    public CustomerDto createCustomer(CustomerDto customerDto);
+    public CustomerDto updateCustomer(CustomerDto customerDto, long customerNumber);
+    public CustomerDto deleteCustomer(long customerNumber);
 
 }

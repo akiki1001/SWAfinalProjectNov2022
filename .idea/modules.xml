@@ -2,8 +2,17 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/EurekaServerReplica1/EurekaServer.iml" filepath="$PROJECT_DIR$/EurekaServerReplica1/EurekaServer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/EurekaServerReplica2/EurekaServer (1).iml" filepath="$PROJECT_DIR$/EurekaServerReplica2/EurekaServer (1).iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/SWAfinalProjectNov2022.iml" filepath="$PROJECT_DIR$/.idea/SWAfinalProjectNov2022.iml" />
-      <module fileurl="file://$PROJECT_DIR$/customersService/customersService.iml" filepath="$PROJECT_DIR$/customersService/customersService.iml" />
+      <module fileurl="file://$PROJECT_DIR$/CloudGateway/cloudgateway.iml" filepath="$PROJECT_DIR$/CloudGateway/cloudgateway.iml" />
+      <module fileurl="file://$PROJECT_DIR$/configServer/configServer.iml" filepath="$PROJECT_DIR$/configServer/configServer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/bookQueryService/customersService.iml" filepath="$PROJECT_DIR$/bookQueryService/customersService.iml" />
+      <module fileurl="file://$PROJECT_DIR$/bookQueryService-2/customersService (1).iml" filepath="$PROJECT_DIR$/bookQueryService-2/customersService (1).iml" />
+      <module fileurl="file://$PROJECT_DIR$/BookService/customersService (2).iml" filepath="$PROJECT_DIR$/BookService/customersService (2).iml" />
+      <module fileurl="file://$PROJECT_DIR$/borrowerService/customersService (3).iml" filepath="$PROJECT_DIR$/borrowerService/customersService (3).iml" />
+      <module fileurl="file://$PROJECT_DIR$/customerService/customersService (4).iml" filepath="$PROJECT_DIR$/customerService/customersService (4).iml" />
+      <module fileurl="file://$PROJECT_DIR$/ReviewService/customersService (5).iml" filepath="$PROJECT_DIR$/ReviewService/customersService (5).iml" />
     </modules>
   </component>
 </project>
